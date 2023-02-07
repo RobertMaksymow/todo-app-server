@@ -10,8 +10,7 @@ import lombok.*;
 @Entity
 @Table(name = "todo")
 public class Todo {
-//    @Getter(AccessLevel.NONE)
-//    @Setter(AccessLevel.NONE)
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,5 +21,8 @@ public class Todo {
 
     @Column(name = "completed")
     private Boolean completed;
+
+    @Column(name = "priority")
+    private int priority;
 
 }
