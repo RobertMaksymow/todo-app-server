@@ -8,21 +8,23 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "todo")
+@Table(name = "todos_all")
 public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id1", nullable = false)
+    private Long id1;
+
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "todo")
+    private String todo;
 
-    @Column(name = "completed")
-    private Boolean completed;
+    @Column(name = "is_completed")
+    private Boolean is_completed;
 
     @Column(name = "priority")
-    private int priority;
-
+    private Integer priority;
 }
